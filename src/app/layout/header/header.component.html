@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <mat-icon (click)="toggleSidenav()" fxHide.gt-xs>menu</mat-icon>&nbsp;
+    <span routerLink="/">LDAP-CP</span>
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/profile">
+            <mat-icon>account_circle</mat-icon>
+            <span>Profil</span>
+        </button>
+        <button mat-menu-item routerLink="/settings">
+            <mat-icon>settings</mat-icon>
+            <span>Einstellungen</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>

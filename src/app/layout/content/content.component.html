@@ -1,0 +1,12 @@
+<mat-sidenav-container fxLayout="row" fxFlexFill>
+    <!-- Desktop Sidenav -->
+    <mat-sidenav #sidenav
+                fxFlexFill
+                fxFlex.gt-xs="20"
+                fxFlex.gt-md="15"
+                [mode]="isMobile ? 'over' : 'side'" 
+                [opened]="isMobile ? false : true">
+        <app-sidebar></app-sidebar>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill fxFlex.gt-xs="80" fxFlex.gt-md="85"><router-outlet></router-outlet></mat-sidenav-content>
+</mat-sidenav-container>
